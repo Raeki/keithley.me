@@ -1,3 +1,5 @@
+import KeizokuApp from '@/components/Keizoku-Study/KeizokuApp';
+
 export default function Home(): JSX.Element {
-  return <div>hello keizoku!</div>;
+  return <KeizokuApp />;
 }
