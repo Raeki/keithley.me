@@ -4,7 +4,7 @@ export default function Header(): JSX.Element {
   return (
     <>
       <header className={styles.header}>
-        <h1>Keithley.me</h1>
+        <h1 className={styles.h1}>Keithley.me</h1>
       </header>
     </>
   );
