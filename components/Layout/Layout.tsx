@@ -12,8 +12,6 @@ export default function Layout({
 }: PropsWithChildren): JSX.Element {
   const [sidebarDisabled, setSidebarDisabled] = useState(false);
 
-  console.log(sidebarDisabled);
-
   return (
     <main className={classes.layout}>
       <Header setSidebarDisabled={setSidebarDisabled} />

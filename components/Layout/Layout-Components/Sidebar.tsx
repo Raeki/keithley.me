@@ -11,7 +11,7 @@ export default function Sidebar({ disabled }: AppProps): JSX.Element {
 
   return (
     <aside className={classes.row_sidebar}>
-      <nav className={classes.row_sidebar__nav}>
+      <nav className={classes.row_sidebar_nav}>
         <ul>
           <li>link 1</li>
           <li>link 2</li>

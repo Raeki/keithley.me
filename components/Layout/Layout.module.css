@@ -5,15 +5,16 @@
 }
 
 .header {
-  flex: 0 0 75px;
+  display: flex;
+  flex: 0 0 50px;
   background-color: #f1f1f1;
-  padding: 15px;
+  padding: 10px;
   font-size: 16px;
 }
 
 .row {
   display: flex;
-  flex: 1 0 100%;
+  flex: 1 0 600px;
 }
 
 .row_sidebar {
@@ -22,12 +23,12 @@
   color: #f1f1f1;
 }
 
-.row_sidebar__nav {
+.row_sidebar_nav {
   padding: 10%;
 }
 
 .row_activeApp {
-  flex: 1 0 600px;
+  flex-grow: 1;
   background-color: #313030;
   color: #f1f1f1;
   padding: 10px;
