@@ -1,10 +1,8 @@
-import { ReactNode } from 'react';
+import { ReactNode, PropsWithChildren } from 'react';
 import classes from '../Layout.module.css';
 
-type AppProps = {
-  children: ReactNode;
-};
-
-export default function ActiveApp({ children }: AppProps): JSX.Element {
+export default function ActiveApp({
+  children,
+}: PropsWithChildren): JSX.Element {
   return <article className={classes.row_activeApp}>{children}</article>;
 }

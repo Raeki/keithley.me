@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { useState, PropsWithChildren } from 'react';
 
 import Header from './Layout-Components/Header';
 import Row from './Layout-Components/Row';
@@ -7,16 +7,15 @@ import ActiveApp from './Layout-Components/ActiveApp';
 import Footer from './Layout-Components/Footer';
 import classes from './Layout.module.css';
 
-type AppProps = {
-  children: ReactNode;
-};
-
-export default function Layout({ children: activeApp }: AppProps): JSX.Element {
+export default function Layout({
+  children: activeApp,
+}: PropsWithChildren): JSX.Element {
+  const [displaySidebar, setDisplaySiderbar] = useState(false);
   return (
     <main className={classes.layout}>
       <Header />
       <Row>
-        <Sidebar />
+        {displaySidebar ? <Sidebar /> : ''}
         <ActiveApp>{activeApp}</ActiveApp>
       </Row>
       <Footer />
