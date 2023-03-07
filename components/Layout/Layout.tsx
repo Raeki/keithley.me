@@ -10,12 +10,15 @@ import classes from './Layout.module.css';
 export default function Layout({
   children: activeApp,
 }: PropsWithChildren): JSX.Element {
-  const [displaySidebar, setDisplaySiderbar] = useState(false);
+  const [sidebarDisabled, setSidebarDisabled] = useState(false);
+
+  console.log(sidebarDisabled);
+
   return (
     <main className={classes.layout}>
-      <Header />
+      <Header setSidebarDisabled={setSidebarDisabled} />
       <Row>
-        {displaySidebar ? <Sidebar /> : ''}
+        <Sidebar disabled={sidebarDisabled} />
         <ActiveApp>{activeApp}</ActiveApp>
       </Row>
       <Footer />
